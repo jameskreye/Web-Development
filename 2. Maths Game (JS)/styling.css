@@ -1,0 +1,162 @@
+html{
+    height: 100%;
+    background: radial-gradient(circle, #fff, #ccc);
+}
+
+#container{
+    height: 400px;
+    width: 550px;
+    background-color: #9DD2EA;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow:  0px 4px 0px 0px #009DE4;
+    /*box-shadow: [horizontal offset] [vertical offest] [blur radius] 
+    [optional spread radius] [color]*/
+    position: relative;
+}
+
+#score{
+    background-color: #F1FF92;
+    padding: 11px;
+    color: #888E5F;
+    position: absolute;
+    left: 500px;
+    box-shadow:  0px 4px 0px 0px #9DA853;
+}
+
+#correct{
+    background-color: #42E252;
+    position: absolute;
+    padding: 11px;
+    color: white;
+    left: 260px;
+    display: none;
+}
+
+
+#wrong{
+    background-color: #DE401A;
+    position: absolute;
+    padding: 11px;
+    color: white;
+    left: 250px;
+    display: none;
+}
+#medal{
+    position: absolute;
+    padding: 11px;
+    color: white;
+    left: px;
+    display: none;
+    background: white url(images/medal.jpg) right center no-repeat;
+}
+
+#question{
+    width: 450px;
+    height: 150px;
+    margin: 50px auto 10px auto;
+    background-color: #9DA0EA;
+    box-shadow: 0px 4px #535AA8;
+    font-size: 100px;
+    text-align: center;
+    font-family: cursive, sans-serif;
+}
+
+#instruction{
+    width: 450px;
+    height: 50px;
+    background-color: #B481D9;
+    margin: 10px auto 10px auto;
+    text-align: center;
+    line-height: 45px;
+    box-shadow: 0px 4px #8153A8;
+}
+
+#choices{
+    height: 100px;
+    width: 450px;
+    margin: 5px auto 5px auto;
+}
+
+.box{
+    height:85px;
+    width: 85px;
+    background-color: white;
+    float: left;
+    margin-right: 36.5px;
+    border-radius: 3px;
+    cursor: pointer;
+    box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    line-height: 80px;
+    position: relative;
+    transition: all 0.2s;/*eso es como el delay para que haga la accion*/
+}
+
+/*agregando hover funcion*/
+.box:hover, #startreset:hover{
+    background-color: #9C89F6;
+    color: white;
+    box-shadow: 0px 4px #6B54D3;
+}
+
+/*Este permite que cuando uno hace click se activa y  se achica el box*/
+.box:active, #startreset:active{
+    box-shadow: 0px 0px #6B54D3;
+    top: 4px;
+}
+
+/*Eso impide que el box4 tenga margin left igual que los otros*/
+#box4{
+    margin-right: 0px;
+}
+
+#startreset{
+    width: 78px;
+    padding:10px;
+    background-color: rgba(255,255,255,0.5);
+    margin: 0 auto;
+    border-radius: 3px;
+    cursor: pointer;
+    box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+    transition: all 0.2s;/*eso es como el delay para que haga la accion*/
+}
+
+/*el componente que muestra el tiempo remainning*/
+#timeremaining{
+    width: 152px;
+    position: absolute;/*si no pongo este primero no funcionan el top ni el left*/
+    top: 394px;
+    left: 400px;
+    padding: 10px;
+    background-color: rgba(181, 235, 36, 0.8);
+    border-radius: 3px;
+    box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+     /*visibility: hidden;Hace que no se muestra el time reamining*/
+    display: none;
+}
+
+/*dibujamos el componente que muestra el score*/
+#gameOver{
+    height: 200px;
+    width: 500px;
+    background: linear-gradient(#F3CA6B, #F3706C);
+    color: white;
+    font-size: 2.5em;
+    position: absolute;
+    text-align: center;
+    top: 100px;
+    left: 45px;
+    text-transform: uppercase;
+    z-index: 2;
+    display: none;
+}
+
+
+
+
+
+
